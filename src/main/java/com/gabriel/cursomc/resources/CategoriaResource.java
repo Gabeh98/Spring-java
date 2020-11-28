@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gabriel.cursomc.domain.Categoria;
 import com.gabriel.cursomc.services.CategoriaService;
-
+//Controlador REST
 @RestController
 @RequestMapping(value="/categorias")
 public class CategoriaResource {
@@ -22,9 +22,9 @@ public class CategoriaResource {
 	
 	@RequestMapping(value ="/{id}",method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
-		
-		Categoria obj = service.find(id);
-				
+	
+		Categoria obj = service.find(id);		
 		return ResponseEntity.ok(obj);
+
 	}
 }
